@@ -3,3 +3,30 @@
 fucghdchsjdvas
 ty
 1234567
+sudo apt update
+sudo apt-get install docker.io
+sudo apt install git
+>>git clone <githuburl>
+sudo apt install nano
+sudo docker build -t oles-app .
+sudo docker run -p 9090:8080 oles-app
+
+-----------------
+minikube
+C:\Windows\System32>cd %USERPROFILE%\Downloads
+C:\Windows\System32>curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-installer.exe
+C:\Users\BHARADWAJ\Downloads>minikube-installer.exe
+add minikube to path
+then start minikube with docker
+o-->minikube start --driver=docker
+
+->>kubectl version --client
+
+-->minikube start
+-->kubectl create deployment mynginx --image=nginx
+
+-->kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80
+
+-->kubectl scale deployment mynginx --replicas=4
+
+-->kubectl port-forward svc/mynginx 8081:80
